@@ -3,6 +3,7 @@ package com.scnoh.java;
 import com.scnoh.java.item1.Calzone;
 import com.scnoh.java.item1.NyPizza;
 import com.scnoh.java.item1.Pizza;
+import com.scnoh.java.item2.Elvis;
 
 import static com.scnoh.java.item1.NyPizza.Size.LARGE;
 import static com.scnoh.java.item1.Pizza.Topping.*;
@@ -20,5 +21,8 @@ public class App
         new Calzone.Builder()
                 .addTopping(HAM).addTopping(PEPPER)
                 .sauceInside().build();
+
+        // 싱글 턴 객체
+        Elvis elvis = Elvis.getInstance();
     }
 }
