@@ -1,11 +1,4 @@
-package com.scnoh.java.item1;
-
-import java.lang.reflect.Array;
-import java.math.BigInteger;
-import java.nio.file.Files;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+package com.scnoh.java.practice1.item1;
 
 public class StaticFactory {
 

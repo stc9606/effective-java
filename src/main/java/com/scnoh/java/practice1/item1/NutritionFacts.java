@@ -1,4 +1,4 @@
-package com.scnoh.java.item1;
+package com.scnoh.java.practice1.item1;
 
 public class NutritionFacts {
     private final int servingSize;

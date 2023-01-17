@@ -1,4 +1,4 @@
-package com.scnoh.java.item2;
+package com.scnoh.java.practice1.item2;
 
 public class Tom {
 
