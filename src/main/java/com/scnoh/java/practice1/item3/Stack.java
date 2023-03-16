@@ -37,4 +37,21 @@ public class Stack {
             elements = Arrays.copyOf(elements, 2 * size + 1);
         }
     }
+
+    /**
+     * clone() 메서드는 사실상 생성자와 같은 효과를 낸다.
+     * 복제된 객체의 불변식을 보장해야 한다.
+     *
+     */
+    @Override
+    public Stack clone() {
+        try {
+            Stack result = (Stack) super.clone();
+            result.elements = elements.clone();
+            return result;
+        } catch (CloneNotSupportedException e) {
+            throw new AssertionError();
+        }
+
+    }
 }
