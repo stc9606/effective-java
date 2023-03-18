@@ -1,6 +1,9 @@
 package com.scnoh.java.practice1.item3;
 
+import java.util.Comparator;
 import java.util.Objects;
+
+import static java.util.Comparator.comparingInt;
 
 public class PhoneNumber {
     private final short areaCode, prefix, lineNum;
@@ -9,6 +12,7 @@ public class PhoneNumber {
         this.areaCode = rangeCheck(areaCode, 999, "지역코드");
         this.prefix = rangeCheck(prefix, 999, "프리픽스");
         this.lineNum = rangeCheck(lineNum, 9999, "가입자 번호");
+        System.out.print("");
     }
 
     private static short rangeCheck(int val, int max, String arg) {
@@ -17,6 +21,11 @@ public class PhoneNumber {
         }
         return (short) val;
     }
+
+    private static final Comparator<PhoneNumber> COMPARATOR =
+            comparingInt((PhoneNumber pn) -> pn.areaCode)
+                    .thenComparingInt(pn -> pn.prefix)
+                    .thenComparingInt(pn -> pn.lineNum);
 
     @Override
     public boolean equals(Object o) {
@@ -44,4 +53,17 @@ public class PhoneNumber {
         System.out.println("hash code : " + phoneNumber.hashCode());
         System.out.println("hash code 2 : " + phoneNumber2.hashCode());
     }
+
+    // 비교자 생성 메서드 활용
+    public int compareTo(PhoneNumber pn) {
+        return COMPARATOR.compare(this, pn);
+    }
+
+    // 정적 Compare 메서드 활용
+    static Comparator<Object> hashcodeOrder = new Comparator<Object>() {
+        @Override
+        public int compare(Object o1, Object o2) {
+            return Integer.compare(o1.hashCode(), o2.hashCode());
+        }
+    };
 }
