@@ -1,7 +1,7 @@
 package com.scnoh.java.practice1.item3;
 
 
-import jdk.internal.ref.Cleaner;
+import java.lang.ref.Cleaner;
 
 public class Room implements AutoCloseable {
 

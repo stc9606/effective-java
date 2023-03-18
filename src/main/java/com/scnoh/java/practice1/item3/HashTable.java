@@ -21,6 +21,7 @@ public class HashTable implements Cloneable {
             Entry result = new Entry(key, value, next);
             for (Entry p = result; p.next != null; p = p.next)
                 p.next = new Entry(p.next.key, p.next.value, p.next.next);
+            return result;
         }
     }
 
