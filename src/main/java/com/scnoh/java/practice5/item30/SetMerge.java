@@ -1,5 +1,6 @@
 package com.scnoh.java.practice5.item30;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -28,5 +29,6 @@ public class SetMerge {
     // 와일드카드 타입을 실제 타입으로 바꿔주는 private 도우미 메서드
     private static <E> void swapHelper(List<E> list, int i, int j) {
         list.set(i, list.set(j, list.get(i)));
+        Arrays.asList()
     }
 }
