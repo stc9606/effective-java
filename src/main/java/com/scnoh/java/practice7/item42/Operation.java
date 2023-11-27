@@ -1,4 +1,4 @@
-package com.scnoh.java.practice6.item42;
+package com.scnoh.java.practice7.item42;
 
 import java.util.function.DoubleBinaryOperator;
 
